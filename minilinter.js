@@ -16,6 +16,7 @@ const betterWords = storyWords.filter(word => {
 const countOf = betterWords.filter(words => {
   return overusedWords.includes(words)
 })
+console.log(countOf);
 
 // 4. count the number of overused words
 let count = 0;
@@ -23,24 +24,24 @@ let countb = 0;
 let countc = 0;
 countOf.forEach(element => {
     if (element == 'really'){
-      count = count + 1;
+      count++;
     } else if (element == 'basically'){
-      countb = countb + 1;
+      countb++;
     } else if (element == 'very'){
-      countc = countc + 1;
+      countc++;
     } 
-  });
+  }
+)
 
-console.log(countOf[0] + ' appears: ' + count);
-console.log(countOf[1] + ' appears: ' + countb);
-console.log(countOf[2] + ' appears: ' + countc);
+console.log(overusedWords[0] + ' appears: ' + count + ' times.');
+console.log(overusedWords[1] + ' appears: ' + countc + ' times.');
+console.log(overusedWords[2] + ' appears: ' + countb + ' times.');
+
 
 // 5. count
 let counter = 0;
 const countSentence = betterWords.filter(element =>{
-  if(element.indexOf('.') !== -1){
-    return counter++;
-  } else if (element.indexOf('!') !== -1){
+  if(element.indexOf('.') !== -1 || element.indexOf('!') !== -1){
     return counter++;
   }
 });

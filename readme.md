@@ -1,0 +1,1 @@
+Assigments and challenges from Iterators chapter of Codecademy
