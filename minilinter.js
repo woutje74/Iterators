@@ -38,14 +38,14 @@ console.log(overusedWords[1] + ' appears: ' + countc + ' times.');
 console.log(overusedWords[2] + ' appears: ' + countb + ' times.');
 
 
-// 5. count
+// 5. count the number of sentences
 let counter = 0;
-const countSentence = betterWords.filter(element =>{
+const countSentence = storyWords.filter(element =>{
   if(element.indexOf('.') !== -1 || element.indexOf('!') !== -1){
-    return counter++;
+    counter++;
   }
 });
-console.log('This text has ' + countSentence.length + ' sentences');
+console.log('This text has ' + counter + ' sentences');
 
 //7. Log betterWords as a single string
 console.log(betterWords.join(' '));
